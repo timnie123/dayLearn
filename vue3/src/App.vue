@@ -3,12 +3,15 @@
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
 import HelloWorld from './components/HelloWorld.vue'
 import CompositionDemo from './components/CompositionDemo.vue'
+import TeleportDemo from './components/TeleportDemo.vue'
+
 </script>
 
 <template>
   <img alt="Vue logo" src="./assets/logo.png" />
 <!--  <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />-->
   <CompositionDemo text="demo"/>
+  <TeleportDemo/>
 </template>
 
 <style>

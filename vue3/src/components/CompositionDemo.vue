@@ -45,8 +45,8 @@ export default {
     // 生命周期
     onMounted(() => {
       let timer = setInterval(() => {
-        age.value++;
-        if (timer > 50) {
+        obj.age++
+        if (age.value > 50) {
           clearInterval(timer);
         }
       }, 1000)
