@@ -45,3 +45,40 @@ val = undefined;
 function test():void {
     // return 'qqq';
 }
+
+//
+function error(): never {
+    throw new Error('12');
+}
+
+let obj: object = {
+    name: '123',
+    age: 21
+};
+
+console.log(obj['name']);
+
+// 枚举
+enum Color {
+    red,
+    blue,
+    green
+}
+
+// 类型别名
+type color = 'red' | 'green' | 'blue';
+
+let myColor: color = 'red';
+// let myColor: color = 'orange';
+
+type member = {
+    name: string,
+    age: number,
+    sex: string
+}
+
+let one: member = {
+    name: 'tim',
+    age: 19,
+    sex: 'nan'
+}
