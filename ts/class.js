@@ -31,8 +31,11 @@ var Student = /** @class */ (function (_super) {
         return _this;
     }
     Student.prototype.say = function () {
-        _super.prototype.say.call(this);
-        console.log('child');
+        // super.say();
+        console.log(this.score);
+    };
+    Student.sayScore = function () {
+        console.log("my score is 13");
     };
     return Student;
 }(Person));
@@ -40,3 +43,50 @@ var p = new Person('tim', 18);
 p.say();
 var c = new Student('tony', 18, 78);
 c.say();
+Student.sayScore();
+var Animal = /** @class */ (function () {
+    function Animal(name, eyes, color) {
+        this.name = name;
+        this.eyes = eyes;
+        this.color = color;
+    }
+    Animal.prototype.say = function () {
+        console.log(1212);
+    };
+    return Animal;
+}());
+var dog = new Animal('dog', 2, 'red');
+dog.say();
+var Dog = /** @class */ (function (_super) {
+    __extends(Dog, _super);
+    function Dog(name, eyes, color, legs, age) {
+        var _this = _super.call(this, name, eyes, color) || this;
+        _this.legs = legs;
+        _this.age = age;
+        return _this;
+    }
+    Object.defineProperty(Dog.prototype, "myAge", {
+        get: function () {
+            return this.age;
+        },
+        set: function (num) {
+            this.age = num;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Dog.prototype.sayHi = function () {
+        console.log(this.name);
+        console.log(this.eyes);
+        console.log(this.legs);
+        console.log(this.age);
+        // console.log(this.color);
+    };
+    return Dog;
+}(Animal));
+var dogA = new Dog('wang', 2, 'red', 4, 2);
+dogA.sayHi();
+console.log(dogA.name);
+console.log(dogA.myAge);
+dogA.myAge = 18;
+console.log(dogA.myAge);
