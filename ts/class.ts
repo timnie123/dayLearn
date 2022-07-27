@@ -91,3 +91,36 @@ console.log(dogA.name)
 console.log(dogA.myAge)
 dogA.myAge = 18
 console.log(dogA.myAge)
+
+abstract class Water {
+
+    abstract name: string;
+    abstract ph: number;
+
+    show() {
+        console.log(this.name)
+    }
+}
+
+class Milk extends Water {
+    name: string = 'yili';
+    ph: number = 7;
+}
+
+let a = new Milk();
+console.log(a.name)
+
+interface IDevice {
+    name: string,
+    usage: string
+}
+
+class Phone implements IDevice {
+    name: string;
+    usage: string;
+
+    constructor(name: string, usage: string) {
+        this.name = name;
+        this.usage = usage
+    }
+}
