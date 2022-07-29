@@ -7,7 +7,10 @@ member = 'tim';
 let price:number = 0;
 
 price += 1;
-// price = '12';
+// price = 0x00;
+// price = 0o00;
+// price = 0b00;
+// price = '12'; error
 
 // boolean
 let flag: boolean = false;
