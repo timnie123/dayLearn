@@ -112,7 +112,8 @@ console.log(a.name)
 
 interface IDevice {
     name: string,
-    usage: string
+    usage: string,
+    show(): void;
 }
 
 class Phone implements IDevice {
@@ -122,5 +123,8 @@ class Phone implements IDevice {
     constructor(name: string, usage: string) {
         this.name = name;
         this.usage = usage
+    }
+
+    show(): void {
     }
 }
