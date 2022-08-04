@@ -41,7 +41,7 @@ any = 'sd';
 
 let val:void;
 
-val = null;
+// val = null;
 val = undefined;
 // val = 123
 
@@ -54,7 +54,7 @@ function error(): never {
     throw new Error('12');
 }
 
-let obj: object = {
+let obj: any = {
     name: '123',
     age: 21
 };
