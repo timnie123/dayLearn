@@ -12,7 +12,7 @@ let arr = getArray('rocket', 3);
 let arr2 = getArray(12, 3);
 
 let res = arr.map(item=>item.length);
-let res2 = arr2.map(item=>item.length); // : Property 'length' does not exist on type 'number'.
+// let res2 = arr2.map(item=>item.length); // : Property 'length' does not exist on type 'number'.
 
 // 泛型约束
 
