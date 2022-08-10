@@ -86,3 +86,38 @@ var Person3 = personDecorator3()(/** @class */ (function () {
 }()));
 var p3 = new Person3('tim');
 console.log(p3.say());
+/*
+* 方法装饰器
+*/
+// 普通方法: target对应的就是 prototype
+// 静态方法: target对应的就是 类的构造函数
+function getNameDecorator(target, key, descriptor) {
+    console.log(target);
+    console.log(key);
+    console.log(descriptor);
+    // descriptor.writable = false;
+    descriptor.value = function () {
+        return "decorator";
+    };
+}
+var Test = /** @class */ (function () {
+    function Test(name) {
+        this.name = "Tim";
+        this.name = name;
+    }
+    Test.prototype.getName = function () {
+        return this.name;
+    };
+    Test.show = function () {
+        console.log("Hello MethodDecorator");
+    };
+    __decorate([
+        getNameDecorator
+    ], Test.prototype, "getName");
+    return Test;
+}());
+var t = new Test("aaa");
+// t.getName = () => {
+//   return "Hello Pop"
+// }
+console.log(t.getName());
