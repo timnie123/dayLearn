@@ -1,5 +1,6 @@
 import { createApp } from 'vue'
 import {createRouter, createWebHistory} from "vue-router"
+import {createPinia} from "pinia";
 import Home from './components/Home.vue'
 import About from './components/About.vue'
 import './style.css'
@@ -23,4 +24,4 @@ router.addRoute({
     component: () => import('./components/Info.vue')
 })
 
-createApp(App).use(router).mount('#app')
+createApp(App).use(router).use(createPinia()).mount('#app')
