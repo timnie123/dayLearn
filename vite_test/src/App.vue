@@ -19,6 +19,9 @@ import HelloWorld from './components/HelloWorld.vue'
   <div>
     <router-link to="/info/123">Go to Info</router-link>
   </div>
+  <div>
+    <router-link :to="{name: 'userInfo'}">Go to UserInfo</router-link>
+  </div>
 </template>
 
 <style scoped>

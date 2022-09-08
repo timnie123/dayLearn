@@ -3,6 +3,7 @@ import {createRouter, createWebHistory} from "vue-router"
 import {createPinia} from "pinia";
 import Home from './components/Home.vue'
 import About from './components/About.vue'
+import UserInfo from './components/UserInfo.vue'
 import './style.css'
 import App from './App.vue'
 
@@ -10,6 +11,7 @@ import App from './App.vue'
 const routes = [
     { path: '/', component: Home },
     { path: '/about', name: 'about', component: About },
+    { path: '/userInfo', name: 'userInfo', component: UserInfo },
 ]
 
 const router = createRouter({
